@@ -9,4 +9,10 @@
  - 1 x Mini Water Pump | DC Voltage: 3-5 V
  - 1 x Vinyl Tubing
  - Silicone Conformal Coating
+ - 1 x Mini USB
+ - 1 x 5V 2.1A USB PLUG
  
+ 
+Hardware Future Improvement:
+- 1 x RTC Module
+- 1 x Float Switch
