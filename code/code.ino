@@ -3,7 +3,7 @@ const int drySoil = 160;
 // D12 pin used for water pump
 const int waterPump = 12;
 // A4 pin used for moisture sensor
-const int moistureSensor = A0;
+const int moistureSensor = A1;
 
 void setup() {
   pinMode(waterPump, OUTPUT);
