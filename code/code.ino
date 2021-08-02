@@ -2,7 +2,7 @@
 const int drySoil = 610;
 // D12 pin used for water pump
 const int waterPump = 12;
-// A4 pin used for moisture sensor
+// A0 pin used for moisture sensor
 const int moistureSensor = A0;
 
 void setup() {
@@ -14,7 +14,7 @@ void setup() {
 void loop() {
   int moistureReading = analogRead(moistureSensor);
      Serial.println(moistureReading);
-     delay(3000);
+     delay(1000);
 
      if (moistureReading >= drySoil){
       Serial.println("Watering plant(s) for 2 seconds. Moisture level is currently: " + String(moistureReading));
