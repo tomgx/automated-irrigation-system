@@ -19,10 +19,14 @@ void loop() {
 
      if (moistureReading >= drySoil){
       Serial.println("Watering plant(s) for 2 seconds. Moisture level is currently: " + String(moistureReading));
-      digitalWrite(waterPump, LOW);
-      delay(2000);
-      //water for 2 seconds
-     }else{
+      //turn on water pump
       digitalWrite(waterPump, HIGH);
+      //water for 2 seconds
+      delay(2000);
+      
+     }else{
+      //turn off water pump
+      digitalWrite(waterPump, LOW);
+      Serial.println("Watering complete. Moisture level: " String(moistureReading))
      }
 }
