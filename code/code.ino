@@ -8,8 +8,7 @@ const int moistureSensor = A4;
 void setup() {
   pinMode(waterPump, OUTPUT);
   pinMode(moistureSensor, INPUT);
-  Serial.begin(9600);
-  
+  Serial.begin(9600);  
 }
 
 void loop() {
