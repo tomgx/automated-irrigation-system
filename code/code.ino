@@ -26,6 +26,6 @@ void loop() {
      }else{
       //turn off water pump
       digitalWrite(waterPump, LOW);
-      Serial.println("Watering complete. Moisture level: " String(moistureReading))
+      Serial.println("Watering complete. Moisture level: " + String(moistureReading));
      }
 }
