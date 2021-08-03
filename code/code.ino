@@ -18,7 +18,7 @@ void setup() {
   digitalWrite(waterPump, HIGH);  
 }
 
-void delayOneDay() {
+void delayOnceStable() {
   Serial.println("Soil moisture is good, next check in: 12 hours");
         delay(oneHour * 12);
         return;
@@ -46,7 +46,7 @@ void loop() {
 //if moistureReading is adequate for 5 times. Sleep for 1 Day.
       int i = 0;
        
-      while (i < 5) {
+      while (i < 10) {
         delay(10000);
        
         if ( moistureReading < drySoil) {
@@ -60,7 +60,7 @@ void loop() {
             i++;
             }}}
           
-          if(i == 5) {
-          delayOneDay();
+          if(i == 10) {
+          delayOnceStable();
           }
         }}
