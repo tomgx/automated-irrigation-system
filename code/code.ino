@@ -1,5 +1,5 @@
 // if the moisture in the soil is less than this number, activate water pump
-const int drySoil = 610;
+const int drySoil = 600;
 // D12 pin used for water pump
 const int waterPump = 12;
 // A0 pin used for moisture sensor
@@ -25,7 +25,7 @@ void delayOneDay() {
 void loop() {
   int moistureReading = analogRead(moistureSensor);
      Serial.println(moistureReading);
-     delay(100);
+     delay(10000);
 //if moisture reading is greater than or equal to 600
      if (moistureReading >= drySoil){
       Serial.println("Watering plant(s) for 2 seconds. Moisture level is currently: " + String(moistureReading));
@@ -46,7 +46,7 @@ void loop() {
         delay(5000);
         int goodMoisture = moistureReading < drySoil;
         if (goodMoisture) {
-          Serial.println("Soil moisture level is good: " + String(moistureReading));
+          Serial.println("Soil moisture level is: ");
           delay(oneSecond);
           int moistureReading = analogRead(moistureSensor);
           Serial.println(moistureReading);
