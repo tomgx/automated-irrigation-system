@@ -14,7 +14,8 @@ const long oneDay    = oneHour * 24;
 void setup() {
   pinMode(waterPump, OUTPUT);
   pinMode(moistureSensor, INPUT);
-  Serial.begin(9600);  
+  Serial.begin(9600);
+  digitalWrite(waterPump, HIGH);  
 }
 
 void delayOneDay() {
@@ -26,6 +27,7 @@ void loop() {
   int moistureReading = analogRead(moistureSensor);
      Serial.println(moistureReading);
      delay(10000);
+     
 //if moisture reading is greater than or equal to 600
      if (moistureReading >= drySoil){
       Serial.println("Watering plant(s) for 2 seconds. Moisture level is currently: " + String(moistureReading));
@@ -43,7 +45,7 @@ void loop() {
 //if moistureReading is adequate for 5 times. Sleep for 1 Day.
       int i = 0;
       while (i < 5){
-        delay(5000);
+        delay(10000);
         int goodMoisture = moistureReading < drySoil;
         if (goodMoisture) {
           Serial.println("Soil moisture level is: ");
