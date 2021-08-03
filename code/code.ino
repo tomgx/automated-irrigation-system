@@ -1,5 +1,5 @@
 // if the moisture in the soil is less than this number, activate water pump
-const int drySoil = 500;
+const int drySoil = 610;
 // D12 pin used for water pump
 const int waterPump = 12;
 // A0 pin used for moisture sensor
