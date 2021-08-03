@@ -25,8 +25,8 @@ void delayOneDay() {
 
 void loop() {
   int moistureReading = analogRead(moistureSensor);
-     Serial.println(moistureReading);
-     delay(10000);
+     //Serial.println(moistureReading);
+     //delay(1000);
      
 //if moisture reading is greater than or equal to 600
      if (moistureReading >= drySoil){
@@ -46,14 +46,15 @@ void loop() {
       int i = 0;
       while (i < 5){
         delay(10000);
-        int goodMoisture = moistureReading < drySoil;
-        if (goodMoisture) {
-          Serial.println("Soil moisture level is: ");
-          delay(oneSecond);
+       
+        if ( moistureReading < drySoil) {
+          
           int moistureReading = analogRead(moistureSensor);
-          Serial.println(moistureReading);
+          Serial.println("Soil moisture level is: " + String(moistureReading));
+          delay(oneSecond);
+          //
           if (moistureReading >= drySoil){
-            break;
+            break;  
           }
           i++;}while(i == 5) {
             delayOneDay();
