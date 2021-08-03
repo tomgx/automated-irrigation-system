@@ -43,7 +43,7 @@ void loop() {
 //turn off water pump
       digitalWrite(waterPump, HIGH);
       
-//if moistureReading is adequate for 5 times. Sleep for 1 Day.
+//if moistureReading is adequate for 5 times. Sleep for 12 hours.
       int i = 0;
        
       while (i < 10) {
