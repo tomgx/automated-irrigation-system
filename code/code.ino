@@ -7,6 +7,8 @@ const int moistureSensor = A0;
 //water for x amount seconds
 const int timeOn = 4000;
 
+//RTC Module Digital pin 8, 6, 7
+
 //delay: 1 second, 1 minute, 1 hours, 1 day. 
 const long oneSecond = 1000;
 const long oneMinute = oneSecond * 60;
