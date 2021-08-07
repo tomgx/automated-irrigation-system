@@ -11,8 +11,8 @@
  - Silicone Conformal Coating
  - 1 x Mini USB
  - 1 x 5V 2.1A USB PLUG
+ - 1 x RTC Module (DS1302)
  
  
 Hardware Future Improvement:
-- 1 x RTC Module
 - 1 x Float Switch
