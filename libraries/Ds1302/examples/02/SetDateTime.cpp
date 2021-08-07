@@ -1,9 +1,20 @@
+/** SetDateTime.cpp
+ *
+ * Example of setting the date and time to the RTC.
+ *
+ * @version 1.0.1
+ * @author Rafa Couto <caligari@treboada.net>
+ * @license GNU Affero General Public License v3.0
+ * @see https://github.com/Treboada/Ds1302
+ *
+ */
+
+#include <Arduino.h>
 #include <Ds1302.h>
 
 
 // DS1302 RTC instance
-// PIN_RST, PIN_CLK, PIN_DAT
-Ds1302 rtc(8, 6, 7);
+Ds1302 rtc(PIN_ENA, PIN_CLK, PIN_DAT);
 
 
 uint8_t parseDigits(char* str, uint8_t count)
@@ -20,7 +31,6 @@ void setup()
     rtc.init();
 
     Serial.begin(9600);
-    // YEAR, MONTH, DATE, DAY OF WEEK(1 to 7), HOUR, MINUTE, SECOND
     Serial.println("Input the date and time (YYMMDDWhhmmss): ");
 }
 
@@ -54,3 +64,4 @@ void loop()
         buffer[char_idx++] = Serial.read();
     }
 }
+
