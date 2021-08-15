@@ -20,7 +20,7 @@
 <img src="https://user-images.githubusercontent.com/25938766/128617806-8a0c867f-0fa3-43b2-9e85-f3f00b7a73f5.png" width="600">
 </details>
 <details>
-<summary>real image</summary>
+<summary>breadboard</summary>
 <img src="https://user-images.githubusercontent.com/25938766/128618126-92a28ddb-28a6-45ed-a53b-b47e7f94f163.jpg" width="600">
 </details>
 
