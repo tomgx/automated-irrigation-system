@@ -1,5 +1,5 @@
-// if the moisture senser value is greater than this number, activate water pump
-const int drySoil = 550;
+// if the moisture senser value is greater than this number, activate water pump (need to calibrate manually for different plants)
+const int drySoil = 480;
 // D12 pin used for water pump
 const int waterPump = 12;
 // A0 pin used for moisture sensor
@@ -34,7 +34,7 @@ void loop() {
 
 //if moisture reading is greater than or equal to drySoil
      if (moistureReading >= drySoil){
-      Serial.println("Watering plant(s) for " + String(timeOn) + " seconds. Moisture level is currently: " + String(moistureReading));
+      Serial.println("Watering plant(s) for " + String(timeOn) + " ms. Moisture level is currently: " + String(moistureReading));
       //turn on water pump
       digitalWrite(waterPump, LOW);
       delay(timeOn);
